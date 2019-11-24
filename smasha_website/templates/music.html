@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+	Music
+{% endblock %}
+
+{% block content %}
+	<h2 style="padding-top: 20px; padding-left: 410px"><b>MUSIC</b></h2>
+	<div id="Music" align="center" style="padding-left: 100px;">
+		
+		<!-- <img src="{{ url_for('static', filename='images/pagebg.jpg') }}"> -->
+		<div style="padding-bottom: 20px; padding-top: 20px" >
+			<iframe src="https://open.spotify.com/embed/album/1o2G0kVzyWhJXG8jlnS8nD" width="560" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		</div>
+		<div style="padding-bottom: 20px">
+			<iframe src="https://open.spotify.com/embed/album/1xeGfCjso91Z7JQmRnV3ua" width="560" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		</div>
+	<!-- 	<div align="center">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/cW1tUqEhi58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div> -->
+		<!-- <h2 style="text-align: center"><b>Beats</b></h2> -->
+		<div style="padding-top:20px; padding-bottom: 20px">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8PV9a1ER8ZgR2e5wO5plk7yAmlS5UI0n" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<head>
+    
+  
+</head>
+{% endblock %}

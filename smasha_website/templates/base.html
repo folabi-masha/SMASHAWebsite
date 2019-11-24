@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-mtS696VnV9qeIoC8w/PrPoRzJ5gwydRVn0oQ9b+RJOPxE1Z1jXuuJcyeNxvNZhdx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/home.css') }}"/>
+	
+	<title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-light bg-dark ">
+		<div>
+			<a href="{{ url_for('main.home') }}">
+				<img src="{{ url_for('static', filename='images/thelogo.png') }}" height="50"></a>
+			<a href="{{ url_for('main.music') }}" style="padding-left: 20px"><b>MUSIC</b></a>
+			<a href="{{ url_for('main.contact') }}" style="padding-left: 20px"><b>CONTACT</b></a>
+		</div>
+		<div class="form" align="right">
+			<form style="padding-left: 550px;" action="/" method="POST">
+				<input type="text" name="email" id="email" placeholder="Join Mailing List">
+				<input type="submit" value="Add email">
+			</form>	
+		</div>
+		<div>
+			<a href="https://open.spotify.com/artist/0JTdGWLVRfvLmrXmwgdlnn">
+				<img src="{{ url_for('static', filename='images/SP.png') }}">
+			</a>
+			<a href="https://www.facebook.com/OfficialSmasha/">
+				<img src="{{ url_for('static', filename='images/FB.png') }}">
+			</a>
+			<a href="https://www.instagram.com/officialsmasha/">
+				<img src="{{ url_for('static', filename='images/IG.png') }}">
+			</a>
+			<a href="https://www.youtube.com/channel/UCSJg5Agz375JSDyI5gvujgQ">
+				<img src="{{ url_for('static', filename='images/YT.png') }}">
+			</a>		
+		</div>
+	</nav>
+	{% block content %} 
+	{% endblock %}
+</body>
+
+</html>

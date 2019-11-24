@@ -1,0 +1,34 @@
+body{
+
+	color: #ffffff;
+
+
+}
+
+div{
+/*	object-fit: cover;*/
+
+background-image: url("../images/mbg.jpg");
+background-image: inherit;
+}
+a{
+	font-size: 15px;
+}
+
+nav a{
+	color: #ffffff;
+
+}
+
+h2{
+	color: #ffffff
+}
+
+#mailing{
+color: Black;
+
+}
+
+#picture{
+/*	background-image: url("../images/musicbg.png");*/
+}
