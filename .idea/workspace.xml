@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f02bf56-ad1d-45f4-a9e9-23cb772e3e7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smasha_website/templates/email_added.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smasha_website/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/smasha_website/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smasha_website/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/smasha_website/routes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
