@@ -2,8 +2,11 @@ from flask import Blueprint, render_template, request, redirect
 
 from .extensions import db
 from .models import Emails
+import re
 
 main = Blueprint('main', __name__)
+
+regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
 
 
 @main.route('/', methods=['POST', 'GET'])
@@ -12,46 +15,28 @@ def home():
         get_email = request.form['email']
         new_email = Emails(emails=get_email)
 
-        try:
-            db.session.add(new_email)
-            db.session.commit()
-            return redirect('/')
-        except:
-            return render_template("bio.html")
-
+        if(re.search(regex, get_email)):
+            try:
+                db.session.add(new_email)
+                db.session.commit()
+                return redirect("/email_added")
+            except:
+                return render_template("bio.html")
+        else:
+            return render_template("bio2.html")
     else:
         return render_template("home.html")
 
 
-@main.route('/music',  methods=['POST', 'GET'])
+@main.route('/music')
 def music():
-    if request.method == 'POST':
-        get_email = request.form['email']
-        new_email = Emails(emails=get_email)
-
-        try:
-            db.session.add(new_email)
-            db.session.commit()
-            return redirect('/music')
-        except:
-            return render_template("bio.html")
-
-    else:
-        return render_template("music.html")
+   return render_template("music.html")
 
 
-@main.route('/contact',  methods=['POST', 'GET'])
+@main.route('/contact')
 def contact():
-    if request.method == 'POST':
-        get_email = request.form['email']
-        new_email = Emails(emails=get_email)
+    return render_template("contact.html")
 
-        try:
-            db.session.add(new_email)
-            db.session.commit()
-            return redirect('/contact')
-        except:
-            return render_template("bio.html")
-
-    else:
-        return render_template("contact.html")
+@main.route('/email_added', methods=['POST', 'GET'])
+def email_added():
+    return render_template("email_added.html")
