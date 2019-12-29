@@ -1,9 +1,0 @@
-.gitignore
-requirements.txt
-Procfile
-*.env
-*.flaskenv
-/venv
-/smasha-website/db.sqlite3
-/smasha-website/__pycache__
-/.idea
