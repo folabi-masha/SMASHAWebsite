@@ -1,0 +1,6 @@
+#!/Users/smasha/PycharmProjects/SMASHA-Official-Site/venv/bin/python
+
+from cx_Freeze import main
+
+main()
+
